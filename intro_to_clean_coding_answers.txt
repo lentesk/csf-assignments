@@ -1,0 +1,107 @@
+1. Clean code is important for simplicity, readability, and for reusability. It also prevents your code from breaking down the road if changes are made.
+
+2. If a train's GPS' code wasn't created to an acceptable standard, there could definitely be major issues. The schedule could be off so commuters would be confused, or even worse other trains may not understand where the train with the bad code is and there could be a crash. Keeping clean code in GPS is probably very important!
+
+3. This isn't clean code because it doesn't use the naming principal and it is definitely not self documenting, so it relies on comments for someone else to understand what the code does.
+
+```FUNCTION convertTemp(temp, scale)
+ IF scale = "F" THEN
+ SET newTemp to (temp−32) * (5/9)
+ PRINT newTemp
+ ELSE IF scale = "C" THEN
+ SET newTemp to temp * 1.8000 + 32.00
+ PRINT newTemp
+ END IF
+END FUNCTION```
+
+4. This code seems clean because it's clear what the function is supposed to do and it is simple.
+
+5a.
+
+```FUNCTION checkOutCustomer(subTotal, discountRate, paymentType)
+
+  total = subTotal * discountRate + (subTotal * tax)
+
+   PRINT "Your total due is: " + total
+
+   IF paymentType = 'CASH' THEN
+       CALL getPayment RETURNING amount
+       PRINT "Change due: " + amount - total
+   ELSE IF paymentType = 'CREDIT CARD' THEN
+       CALL getPayment RETURNING amount
+       PRINT "Your credit card has been charged: " + total
+   END IF
+END FUNCTION```
+
+5b.
+
+```FUNCTION checkoutBook(book, guest)
+ IF guest.accountActive THEN
+     IF NOT(guest.hasOverdueBooks) && guest.outstandingFees = 0 THEN
+           CALL updateStatus WITH book
+       END IF
+    ELSE
+     PRINT "Unable to check out book."
+ END IF
+END FUNCTION
+
+FUNCTION updateStatus(book)
+APPEND book to guest.books
+SET book.status to "Checked Out"
+PRINT "Your books have been issued."
+```
+
+5c.
+
+```CLASS Balance
+ FUNCTION displayBalance
+    PRINT balance
+ END FUNCTION
+
+ FUNCTION deposit(amount)
+    SET balance to balance + amount
+ END FUNCTION
+
+ FUNCTION withdraw(amount)
+     IF balance > amount THEN
+       SET balance to balance - amount
+     END
+ END FUNCTION
+
+CLASS Accounts
+ FUNCTION creditCardOffer
+     IF NOT(customer.hasCreditCard) THEN
+         CALL offerCreditCard
+     END
+ END FUNCTION
+
+ FUNCTION checkStatus
+     IF NOT(customer.hasCheckingAccount) THEN
+         CALL offerCheckingAccount
+     END
+ END FUNCTION
+
+ ....
+ ....
+ ....
+
+END
+```
+
+6. ```var sum = arr.reduce((a, b) => a + b);
+if (sum > 0 && Math.sqrt(sum) % 1 === 0){
+console.log(Math.sqrt(sum));
+}
+else {
+console.log(sum);
+}```
+
+7.
+```function hasDuplicate(arr) {
+  var counts = {}
+  for (var i = 0; i < arr.length; i++){
+    if (counts[arr[i]]) { return true; }
+  }
+  return false
+};
+console.log(hasDuplicate(arr));```
