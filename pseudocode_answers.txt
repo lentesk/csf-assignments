@@ -1,0 +1,48 @@
+Short Answer
+
+1. Programmers user pseudocode to make a framework or an outline for preparing to develop algorithms, meant to be read by a person and not a computer.
+
+2. If you run pseudocode on your computer you'll get an error because it's not written in a specific language a computer can read.
+
+Programming Assignment
+
+1.
+INPUT first number
+INPUT second number
+IF first number is greater than second number
+RETURN first number
+IF second number is greater than first number
+RETURN second number
+
+2.
+BEGIN
+  for i = 1 to 100 do
+  Print: i and go to new line
+  end for
+END
+
+3.
+
+BEGIN
+  for i = firstEntry to lastEntry do
+    IF entry === specificEntry THEN
+      PRINT: entry
+  end for
+END
+
+4. var entries = ['Gabe', 'Taylor', 'Alan', 'Alex', 'Ashley'];
+
+function entrySearch(entry) {
+    for(var i=0; i < entries.length; i++) {
+        if(entries[i] === entry) {
+            console.log("Found entry " + entry + " at index " + i);
+            return true;
+        }
+    }
+    return false;
+}
+
+var entry = entrySearch(Phil);
+if(!entry) {
+    console.log('Entry does not exist');
+}
