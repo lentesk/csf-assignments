@@ -1,0 +1,15 @@
+1.
+
+a. var parkRideLine =["Vivian", "Ava", "Josh", "Patrick", "Mike"];
+b. parkRideLine.push("Mary");
+c. var findJosh = parkRideLine.indexOf("Josh");
+console.log(findJosh);
+d. var findEmily = parkRideLine.indexOf("Emily");
+// console.log(findEmily) returns -1
+e. parkRideLine.splice(1,0,"Melissa")
+f. parkRideLine.splice(4,1)
+
+2. A library's inventory can be modeled using a data structure. It can be grouped by genre then ordered by author's last name then title.
+
+
+3. A developer can access and manipulate the data by invoking different array methods to add or remove books, rearrange the genres, filter by author, or add or manipulate genres.
