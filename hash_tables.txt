@@ -1,0 +1,82 @@
+1. A hash table is a data structure containing key-value pairs, and each key must be unique.
+
+2. Hashing is used when large keys can't be used directly as an index. The keys are converted into small keys then the values are stored in a hash table.
+
+3. Hash tables store data as key/value pairs uniformly across an array. First, an element is converted to an integer using a hash function, this integer becomes the index to store the original element. Then the element is stored in the hash table where it can be retrieved using the hashed key.
+
+      hash = hashfunc(key)
+      index = hash % array_size
+
+4. Objects are name value pairs, but can hold different types of data bundled together. Hash tables should be used when your data contains a variable number of consistently formatted values that all have identifiers.
+
+5a. Hash table
+b. Object
+c. hash table
+d. Object
+e. hash table
+
+6. class Customer {
+constructor(name, address, phoneNumber) {
+  this.name = name;
+  this.address = address;
+  this.phoneNumber = phoneNumber;
+}
+
+getHashCode() {
+  return parseInt(this.phoneNumber)
+}
+}
+
+var customers = []
+
+let katie = new Customer("Katie", "123 Oak Rd", "7777777777");
+let meg = new Customer("Meg", "123 Oak Rd", "1234567891");
+let taylor = new Customer("Taylor", "55 N Main", "3335552222");
+
+customers[katie.getHashCode()] = katie;
+
+7. class Inventory {
+  constructor(item, color, count, serial) {
+    this.item = item;
+    this.color = color;
+    this.count = count;
+    this.serial = serial;
+  }
+
+getHashCode(){
+  return parseInt(this.serial)
+}
+}
+
+var inventoryLog = []
+
+let shirt1 = new Inventory("shirt", "red", "20", "58252669");
+let socks2 = new Inventory("socks", "white", 10, "38939833");
+let backpack = new Inventory("bag", "black", 3, "94926957");
+
+inventoryLog[backpack.getHashCode()] = backpack;
+
+8. class Newspaper {
+  constructor(name, publisher, publicationDate) {
+    this.name = name;
+    this.publisher = publisher;
+    this.publicationDate = publicationDate;
+  }
+
+  getHashCode(){
+    return parseInt(this.publisher)
+  }
+
+  getHashCode(){
+    return parseInt(this.publicationDate)
+  }
+
+}
+
+let newspapers = []
+
+let chiTrib = new Newspaper("Chicago Tribune", "Bruce Dold", "06-11-2018")
+let nyTimes = new Newspaper("New York Times", "A.G. Sulzberger", "06-08-2018")
+
+newspapers[chiTrib.getHashCode()] = chiTrib;
+newspapers[nyTimes.getHashCode()] = nyTimes;
