@@ -1,0 +1,64 @@
+Short Answers
+
+1. Stacks are data structures that arrange elements in LIFO priority where queues arrange them in FIFO priority.
+
+2. Stacks and queues are both data structures with order to them.
+
+3. UNDO - stack because the thing you would want to undo would be the last element added to the data structure (pop)
+   REDO - stack again because the thing you would want to push that action back onto the data structures
+
+Programming Questions
+
+1.
+
+function reverse(str) {
+  var output = [];
+  for (var i = str.length - 1; i >=0; i--) {
+    output.push(str.charAt(i));
+  }
+  return output.join("")
+  }
+
+
+console.log(reverse("bloc"))
+
+2.
+CLASS Stack
+ FUNCTION pop(queue)
+   FOR each character in queue
+   CALL stack.push with character
+   END FOR
+   REMOVE LAST element of list from list
+   Return queue
+ END FUNCTION
+END CLASS
+
+
+  function pop(queue) {
+    for (i = 0; i < queue.length; i++){
+      if (i == queue.length - 1) {
+        queue.splice(0,1);
+        return queue;
+      }
+     let temp = queue[0];
+     queue.splice(0,1);
+     queue.push(temp);
+    }
+  return "n/a"
+  }
+
+  console.log(pop([1,2,3,4]))
+
+4.
+
+CLASS QUEUE
+ FUNCTION enqueue(element)
+   APPEND to the end of the list
+ END FUNCTION
+
+ FUNCTION dequeue
+   SET temp to the first element
+   REMOVE first element from list
+   RETURN temp
+ END FUNCTION
+END CLASS
