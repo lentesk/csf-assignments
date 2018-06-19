@@ -1,0 +1,46 @@
+1.
+
+Coffee
+
+FUNCITON
+Add water to coffee machine
+Add filter to machine
+Measure coffee and add to filter
+Turn on coffee machine
+Aquire cup
+Pour coffee in cup
+  IF milk/sugar needed
+    Add milk/sugar to cup
+  END IF
+Stir
+Serve
+END FUNCTION
+
+Washing Dishes
+
+FUNCTION
+SET dish at the stack position index to temp
+FOR EACH dish in stack
+  Wash then dry dish
+DECREMENT the stack position index by 1
+END FOR
+END FUNCTION
+
+Getting dressed
+
+FUNCTION
+IF weather is hot
+  dress for warm weather
+ELSE IF weather is cool
+  dress for mild weather
+ELSE
+  dress for cold weather
+END FUNCTION
+
+2.
+
+Lastpass created encryption algorithms so we can create a variety of passwords for all of our accounts and store them securely.
+Hopper created an algorithm to predict flight prices, which lets users know when to buy tickets at the flight's cheapest price/time.
+Digit created an automatic saving algorithm, which tracks your daily checking account balance, income, and spending and saves enough every day so you keep a manageable amount in your checking account and don't overdraw.
+
+3. I think speed constitutes an efficient algorithm. I think what contributes to the speed of the algorithm is the size of the data set it is working with, along with the number of steps needed to take to go through each element and the memory required along the way.
