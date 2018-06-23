@@ -1,0 +1,24 @@
+1. Time complexity is a function that estimates the time it takes for a program to execute. This relates to algorithms because they all have a runtime, and time complexity estimates the algorithms efficiency.
+
+2. Run time is the amount of physical time an algorithm takes to run from start to finish, often used synonymously with time complexity.
+
+3. Time complexity is calculated as a function of the variable n, where n is the size input, and f(n) is the rate the algorithm grows as the size input grows.
+
+4.
+  1. Constant Growth (O(1))
+  2. Log-Logarithmic (O(log log n))
+  3. Logarithmic Growth (O(log n))
+  4. Linear (O(n))
+  5. Log Linear (O(n log n)
+  6. Quadratic Growth (O(n^2))
+  7. Exponential Growth (O(2^n))
+
+  5. Constant time - when a cashier rings up items at a grocery store, the items will always require the same action regardless of how many items are in the basket.
+
+  6. O(n)
+
+  7. O(n^2)
+
+  8. O(2^n)
+
+  9.  Number 6 is most efficient 
