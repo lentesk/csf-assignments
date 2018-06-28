@@ -1,0 +1,51 @@
+1. In iteration, loops are used to repeat a process. A recursive function breaks itself into smaller problems until it solves itself, it calls itself with parameters that move towards the base case that is set within the function.  They can produce the same results, but the processes are different.
+
+2. Factorials, Fibonacci sequence, Merge sort, Recursive binary search, Breadth-first and depth-first tree/graph traversal algorithms
+
+3. Iteration could be preferred to recursion because it takes a little less time than recursion. Recursion also has the possibility of stack overflow. Recursion could be preferable because it's more readable and shorter.
+
+4. Iterative factorial: Loops through each number in the list and multiples them together
+   Recursive factorial: Breaks the problem into subproblems. Starts n and multiplies it by (n - 1)! until it works its way to the end.
+   In the recursive function, it will end if the result is a base case, but in the iterative version it will always loop through all of the elements.
+
+   Iterative maximum: Loops through each element in the array to check for the largest
+   Recursive maximum: Sets a base case for empty or only one item, then takes the first value and recursively calls the maximum function with the remaining numbers. Compares it to the item held and finds which is larger.
+   Recursive takes more steps.
+
+   Iterative Fibonacci: Checks if element is greater than 0, if it's not it's set to 1. Loops through each element in the array, and adds each previous and current together
+   Recursive Fibonacci: Checks the base case, calls function and returns the numbers that are both one back from the numbers place and two back from its place, adds them together, calls the function again and again until it is finished.
+
+5.   var arr = [1,2,1,2,3];
+      function counter(arr) {
+      if (arr == undefined || arr.length < 1) {
+        return 0;
+        }
+        return counter(arr.slice(0, -1)) + 1;
+      }
+
+6.  var isPalindrome = function(str) {
+      var strLength = str.length;
+      if (strLength === 0 || strLength === 1) {
+          return true;
+          }
+
+          if (str[0] === str[strLength - 1]) {
+          return isPalindrome( str.slice(1, strLength - 1) );
+          }
+
+          return false;
+     };
+
+7. var visitNumber = function(x, y) {
+      if (x > 0) {
+        return;
+      }
+      if (y === undefined) {
+        y = 0;
+      } else if (y > 9) {
+        return visitNumber(x + 1);
+      }
+      console.log(x, y);
+      visitNumber(x, y + 1);
+    };
+    visitNumber(0);
