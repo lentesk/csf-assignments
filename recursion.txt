@@ -36,12 +36,16 @@
           return false;
      };
 
-7. var block = [house1, house2, house3, house4];
-    function findCat(block) {
-      if (block == undefined || block.length < 1) {
-        return "no houses here"
-      } else {
-        return findCat(block.slice(0, -1);
-      }
-    };
-console.log(findCat(block));
+7.
+
+var houses = ["house1", "house2", "house3", "house4"];
+var FIRST_HOUSE = 0;
+nextHouse(houses, FIRST_HOUSE);
+
+function nextHouse(houses, position) {
+  if (position == houses.length) { return }
+
+  console.log(houses[position])
+  position++
+  nextHouse(houses, position)
+}
