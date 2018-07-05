@@ -1,4 +1,4 @@
-1. A real-life scenario that uses linear search could be finding a word in a dictionary by scanning each word in alphabetical order until the target word is found.
+1. A real-life scenario that uses linear search could be finding a specific book in an unorganized bookshelf. You'd look through each book starting from the left u
 
 2. A real-life scenario that uses binary search could be finding a specific artist in a massive music library. Instead of using linear search and scrolling through starting at A to find the artist, you go to the middle and compare from there until you find the artist.
 
@@ -12,19 +12,19 @@
 
 1.
 
-function dictionarySearch(data, searchQuery) {
-  var answer = 'not found';
-  for (var i = 0, len = data.length; i < len; i++) {
-    if (data[i] === searchQuery) {
-      answer = i;
-    }
-  }
-  return answer;
+while (first <= last) {
+  var mid = (first + last) / 2;
+  if(collection[mid] > word) { first = mid -1;
 }
-
-var words = []
-var result = dictorarySearch(words, "Albatross");
-console.log(result);
+else if (collection[mid] < word){
+  first = mid + 1;
+}
+else {
+  return mid;
+}
+}
+return "Sorry, that word was not found.";
+}
 
 2.
 
