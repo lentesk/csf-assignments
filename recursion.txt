@@ -36,16 +36,12 @@
           return false;
      };
 
-7. var visitNumber = function(x, y) {
-      if (x > 0) {
-        return;
+7. var block = [house1, house2, house3, house4];
+    function findCat(block) {
+      if (block == undefined || block.length < 1) {
+        return "no houses here"
+      } else {
+        return findCat(block.slice(0, -1);
       }
-      if (y === undefined) {
-        y = 0;
-      } else if (y > 9) {
-        return visitNumber(x + 1);
-      }
-      console.log(x, y);
-      visitNumber(x, y + 1);
     };
-    visitNumber(0);
+console.log(findCat(block));
