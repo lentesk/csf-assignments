@@ -1,0 +1,38 @@
+1. A real-life scenario that uses linear search could be finding a specific book in an unorganized bookshelf. You'd look through each book starting from the left u
+
+2. A real-life scenario that uses binary search could be finding a specific artist in a massive music library. Instead of using linear search and scrolling through starting at A to find the artist, you go to the middle and compare from there until you find the artist.
+
+3. 7 iterations
+
+4. 3 iterations
+
+5. In this case you'd have to use linear search since it's unsorted, and binary search only works with sorted lists.
+
+6. Here it would be easier to use binary search since it's much more likely there would be less iterations.
+
+1.
+
+while (first <= last) {
+  var mid = (first + last) / 2;
+  if(collection[mid] > word) { first = mid -1;
+}
+else if (collection[mid] < word){
+  first = mid + 1;
+}
+else {
+  return mid;
+}
+}
+return "Sorry, that word was not found.";
+}
+
+2.
+
+function findFish(collection, targetFish){
+  for(var i = 0; i < collection.length; i++){
+    if (collection[i] === targetFish){
+      return "You've found the fish!";
+    }
+  }
+  return "That fish isn't in this tank.";
+}
