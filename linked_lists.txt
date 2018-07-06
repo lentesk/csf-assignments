@@ -25,50 +25,51 @@ LinkedList.prototype.push = function(element) {
 
 2.
 
-function LinkedList() {
-  this.head = null;
-  this.tail = null;
+var list = {
 
-  function Node(value, next, prev) {
-  this.value = value;
-  this.next = next;
-  this.prev = prev;
-}
-
-LinkedList.prototype.addToHead = function(value) {
-  const newNode = new Node(value, this.head, null);
-  if (this.head) this.head.prev = newNode;
-  else this.tail = newNode;
-  this.head = newNode;
-};
-
-this.removeDupe = function() {
-  var currentNode = this.head;
-  if (this.head == null)
+  }
+  var node = {
+    head: null,
+    tail: null,
+    addToHead: function(node) {
+      this.head = node;
+    },
+    addToTail: function(node) {
+      this.tail = node;
+    },
+    findByValue: function(searching_value) {
+      if (this.head === searching_value) {
+        this.head;
+      } else {
+        false;
+      }
+    },
+      removeDupe: function() {
+      var currentNode = this.head;
+       if (this.head == null) {
+        console.log('No duplicates or single item in list')
+       }
             return;
-  /* Traverse list till the last node */
-        while (this.currentNode != null) {
+ 
+         while (this.currentNode != null) {
 
-            /*Compare current node with the next node */
             if (this.currentNode == this.currentNode.next) {
                 let nextNext = currentNode.next.next;
                 currentNode.next = null;
                 currentNode.next = nextNext;
-            }
-            else {// advance if no deletion
+            } else {
                current = currentNode.next;
+            }
         }
-}
 
-};
-}
+       }
+  };
 
-const list = new LinkedList();
-list.addToHead(100);
-list.addToHead(200);
-list.addToHead(100);
-list.addToHead(300);
-console.log(list.removeDupe(list));
+  
+  node.addToHead(3);
+  node.addToTail(3);
+  node.addToHead(5);
+  node.removeDupes();
 
 3.
 
@@ -95,15 +96,11 @@ var reverseLinkedList = function(linkedlist) {
   var previous = null;
 
   while(node) {
-    // save next or you lose it!!!
     var save = node.next;
-    // reverse pointer
     node.next = previous;
-    // increment previous to current node
     previous = node;
-    // increment node to next node or null at end of list
     node = save;
   }
-  return previous;   // Change the list head !!!
+  return previous; 
 }
 linkedlist = reverseLinkedList(linkedlist);
