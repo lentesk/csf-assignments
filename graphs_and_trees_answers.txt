@@ -1,0 +1,11 @@
+1. A binary tree is a data structure that simulates a tree structure. What makes a binary tree unique is that each  parent node can only have up to two children..
+
+2. A heuristic is a problem solving approach used to make guesses.
+
+3. A search problem also makes use of heuristics.
+
+4. A depth first search searches down a branch for paths before searching all the children (searches deep) while a breadth-first search searches level by level (searches wide).
+
+5. In an undirected, a-cyclic, unweighted graph, the graph can start at any point, there are no nodes or sets of nodes that hold a known shared featured that accounts for something important, and no loops are formed.
+
+6. A binary search tree is a directional, unweighted, a-cyclic graph.

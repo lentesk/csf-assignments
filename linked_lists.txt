@@ -1,0 +1,109 @@
+1.
+
+Pros: Linked lists use less memory, can grow to bigger sizes
+Cons: Inefficient accessibility due to nodes existing in different places within the memory
+
+2. Linked lists are like trains, where each cards are linked in a certain order and one car points to the next.
+
+Programming Questions
+1.
+
+LinkedList.prototype.push = function(element) {
+ SET node = {
+   value: element,
+   next: null
+ }
+
+ IF the head node does not exist
+   THEN SET head to node
+ ELSE
+   SET current node to head
+    WHILE current node is not null AND current < node
+   SET current.next to node
+ }
+}
+
+2.
+
+function LinkedList() {
+  this.head = null;
+  this.tail = null;
+
+  function Node(value, next, prev) {
+  this.value = value;
+  this.next = next;
+  this.prev = prev;
+}
+
+LinkedList.prototype.addToHead = function(value) {
+  const newNode = new Node(value, this.head, null);
+  if (this.head) this.head.prev = newNode;
+  else this.tail = newNode;
+  this.head = newNode;
+};
+
+this.removeDupe = function() {
+  var currentNode = this.head;
+  if (this.head == null)
+            return;
+  /* Traverse list till the last node */
+        while (this.currentNode != null) {
+
+            /*Compare current node with the next node */
+            if (this.currentNode == this.currentNode.next) {
+                let nextNext = currentNode.next.next;
+                currentNode.next = null;
+                currentNode.next = nextNext;
+            }
+            else {// advance if no deletion
+               current = currentNode.next;
+        }
+}
+
+};
+}
+
+const list = new LinkedList();
+list.addToHead(100);
+list.addToHead(200);
+list.addToHead(100);
+list.addToHead(300);
+console.log(list.removeDupe(list));
+
+3.
+
+function LinkedList() {
+  this.head = null;
+  this.tail = null;
+
+  function Node(value, next, prev) {
+  this.value = value;
+  this.next = next;
+  this.prev = prev;
+}
+
+LinkedList.prototype.addToHead = function(value) {
+  const newNode = new Node(value, this.head, null);
+  if (this.head) this.head.prev = newNode;
+  else this.tail = newNode;
+  this.head = newNode;
+};
+
+
+var reverseLinkedList = function(linkedlist) {
+  var node = linkedlist;
+  var previous = null;
+
+  while(node) {
+    // save next or you lose it!!!
+    var save = node.next;
+    // reverse pointer
+    node.next = previous;
+    // increment previous to current node
+    previous = node;
+    // increment node to next node or null at end of list
+    node = save;
+  }
+  return previous;   // Change the list head !!!
+}
+linkedlist = reverseLinkedList(linkedlist);
