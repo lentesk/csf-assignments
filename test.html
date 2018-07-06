@@ -1,0 +1,68 @@
+// function LinkedList() {
+//   this.head = null;
+//   this.tail = null;
+//
+//   function Node(value, next, prev) {
+//   this.value = value;
+//   this.next = next;
+//   this.prev = prev;
+// }
+//
+// LinkedList.prototype.addToHead = function(value) {
+//   const newNode = new Node(value, this.head, null);
+//   if (this.head) this.head.prev = newNode;
+//   else this.tail = newNode;
+//   this.head = newNode;
+// };
+//
+// this.removeDupe = function() {
+//   var currentNode = this.head;
+//   if (this.head == null)
+//             return;
+//   /* Traverse list till the last node */
+//         while (this.currentNode != null) {
+//
+//             /*Compare current node with the next node */
+//             if (this.currentNode == this.currentNode.next) {
+//                 let nextNext = currentNode.next.next;
+//                 currentNode.next = null;
+//                 currentNode.next = nextNext;
+//             }
+//             else {// advance if no deletion
+//                current = currentNode.next;
+//         }
+// }
+//
+// };
+// }
+//
+// const list = new LinkedList();
+// list.addToHead(100);
+// list.addToHead(200);
+// list.addToHead(100);
+// list.addToHead(300);
+// console.log(list.removeDupe(list));
+
+<script>
+  var houses = ["house1", "house2", "house3", "house4"];
+  var FIRST_HOUSE = 0;
+  nextHouse(houses, FIRST_HOUSE);
+
+
+
+
+
+
+
+
+
+  function nextHouse(houses, position) {
+    if (position == houses.length) { return }
+
+    console.log(houses[position])
+    position++
+    nextHouse(houses, position)
+  }
+
+
+</script>
