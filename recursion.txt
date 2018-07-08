@@ -43,9 +43,12 @@ var FIRST_HOUSE = 0;
 nextHouse(houses, FIRST_HOUSE);
 
 function nextHouse(houses, position) {
-  if (position == houses.length) { return }
-
-  console.log(houses[position])
-  position++
+  if (position === houses.length) {
+      return houses[position].pop
+        } else { (position == null)
+     return "all houses checked"
+    }
+    position++
+    console.log(houses[position])
   nextHouse(houses, position)
 }
