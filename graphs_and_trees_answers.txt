@@ -9,3 +9,16 @@
 5. In an undirected, a-cyclic, unweighted graph, the graph can start at any point, there are no nodes or sets of nodes that hold a known shared featured that accounts for something important, and no loops are formed.
 
 6. A binary search tree is a directional, unweighted, a-cyclic graph.
+
+1. 
+
+function Node(val){
+  this.value = val;
+  this.left = null;
+  this.right = null;
+}
+
+
+function BinarySearchTree(){
+  this.root = null;
+}
