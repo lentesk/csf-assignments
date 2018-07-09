@@ -1,0 +1,35 @@
+1.
+
+FUNCTION bubbleSort(collection)
+  REPEAT
+    SET swapped to false
+    FOR i = FIRST INDEX of collection to LAST INDEX of collection - 1
+      IF collection[i] > collection[i +1] THEN
+        SET tmp to collection[i]
+        SET collection[i] to collection[i + 1]
+        SET collection[i + 1] to tmp
+        SET swapped to true
+      END IF
+    END FOR
+  UNTIL swapped is false
+
+  RETURN collection
+END FUNCTION
+
+2.
+
+FUNCTION quickSort(left, right)
+  IF right - left <= 0
+    RETURN
+  ELSE
+    pivot = A[right]
+    partition = partitionFunc(left, right, pivot)
+    quickSort(left, partition - 1)
+    quickSort(partition + 1, right)
+  END IF
+END FUNCTION
+
+3. Merge sort and quick sort are more efficient because they execute more quickly since they contain few loops and if statements compared to the other algorithms. With big inputs, these algorithms time complexity will grow more slowly than the others.
+
+4. Bucket sort works by elements of an array into different buckets that are determined by some sort of range. Each individual bucket is then sorted using insertion or by recursively calling the bucket sort algorithm, then each sorted bucket is concatenated in order.
+   The ideal input is one that is uniformly distributed over a range.
