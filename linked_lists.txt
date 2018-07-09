@@ -76,7 +76,7 @@ var list = {
 function LinkedList() {
   this.head = null;
   this.tail = null;
-
+}
   function Node(value, next, prev) {
   this.value = value;
   this.next = next;
@@ -86,21 +86,29 @@ function LinkedList() {
 LinkedList.prototype.addToHead = function(value) {
   const newNode = new Node(value, this.head, null);
   if (this.head) this.head.prev = newNode;
-  else this.tail = newNode;
+  else this.tail = newNode; 
   this.head = newNode;
 };
 
+LinkedList.prototype.reverse = function(){
+  currentNode = this.head;
+  nextNode = currentNode.next;
 
-var reverseLinkedList = function(linkedlist) {
-  var node = linkedlist;
-  var previous = null;
-
-  while(node) {
-    var save = node.next;
-    node.next = previous;
-    previous = node;
-    node = save;
-  }
-  return previous; 
+while(nextNode) {
+  var temp = nextNode.next;
+  nextNode.next = currentNode;
+  currentNode = nextNode;
+  nextNode = temp;
 }
-linkedlist = reverseLinkedList(linkedlist);
+
+this.head.next = null;
+this.head = currentNode;
+};
+
+const list = new LinkedList();
+list.addToHead("a");
+list.addToHead("b");
+list.addToHead("c");
+list.addToHead("d");
+list.reverse();
+console.log(list);
