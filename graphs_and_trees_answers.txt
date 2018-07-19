@@ -9,3 +9,63 @@
 5. In an undirected, a-cyclic, unweighted graph, the graph can start at any point, there are no nodes or sets of nodes that hold a known shared featured that accounts for something important, and no loops are formed.
 
 6. A binary search tree is a directional, unweighted, a-cyclic graph.
+
+1.
+
+var BinarySearchTree = function(value) {
+  this.value = value;
+  this.left = null;
+  this.right = null;
+};
+
+BinarySearchTree.prototype.contains = function(targetValue) {
+  if (this.value === targetValue) {
+    return true;
+  }
+  
+  if (this.value < targetValue && this.right) {
+    return this.right.contains(targetValue);
+  }
+  
+  if (this.value > targetValue && this.left) {
+    return this.left.contains(targetValue);
+  }
+  
+  return false;
+};
+
+2. 
+
+var BinarySearchTree = function(value) {
+  this.value = value;
+  this.left = null;
+  this.right = null;
+};
+
+BinarySearchTree.prototype.findDistance = function(root, firstNode, secondNode){
+  if (root === null || firstNode === secondNode){
+    return 0;
+  }
+  distance.left = findDistance(root.left, firstNode, secondNode);
+  distance.right = findDistance(root.right, firstNode, secondNode);
+
+  if (distance.left > 0 && distance.right > 0){
+    return distance.left + distance.right;
+  }
+  if (distance.left > 0 && distance.right > 0){
+    return distance.left;
+  }
+  if (distance.right > 0 && root === firstNode || secondNode){
+    return distance.right;
+  }
+  if (distance.left === 0 && distance.right === 0){
+    if(root !== firstNode || secondNode){
+      return 0;
+    }
+    if (root == firstNode || secondNode){
+      return 1;
+    }
+    } else {
+      return max(distance.left, distance.right) + 1;
+    }
+}
